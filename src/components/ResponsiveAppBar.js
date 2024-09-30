@@ -97,14 +97,20 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                
                 onClick={() => handlePageClick(page)}
                 sx={{
                   my: 2,
                   color: "white",
                   display: "block",
-                  "&:hover": { border: "1px solid #00E0FF" },
-                }}  
+                  border: "1px solid transparent", // Initial border state
+                  transition: "0.3s", // Smooth transition for hover effect
+                  position: "relative", // Required for inner shadow effect
+                  "&:hover": {
+                    border: "1px solid #00E0FF", // Neon border color
+                    mixBlendMode: "screen",
+                    background: "#272A30",
+                  },
+                }}
               >
                 {page}
               </Button>
@@ -112,36 +118,36 @@ function ResponsiveAppBar() {
 
             {/* Login and Signup buttons */}
             <Button
-            startIcon={ <img
-              src={profile}
-              alt="profile"
-             
-            />}
+              startIcon={<img src={profile} alt="profile" />}
               sx={{
                 ml: 5,
                 borderRadius: "0.1875rem",
                 background: "#272A30",
                 boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 color: "white",
-                "&:hover": { border: "1px solid #00E0FF" },
+                "&:hover": {
+                  border: "1px solid #00E0FF", // Neon border color
+                  mixBlendMode: "screen",
+                  background: "#272A30",
+                },
               }}
             >
               Login
             </Button>
 
             <Button
-            startIcon={ <img
-              src={profile}
-              alt="profile"
-             
-            />}
+              startIcon={<img src={profile} alt="profile" />}
               sx={{
                 ml: 2,
                 borderRadius: "0.1875rem",
                 background: "#272A30",
                 boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 color: "white",
-                "&:hover": { border: "1px solid #00E0FF" },
+                "&:hover": {
+                  border: "1px solid #00E0FF", // Neon border color
+                  mixBlendMode: "screen",
+                  background: "#272A30",
+                },
               }}
             >
               Signup
