@@ -1,58 +1,23 @@
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: '#9259be', // Custom Primary Color
-//     },
-//     secondary: {
-//       main: '#ff4081', // Custom Secondary Color
-//     },
-//   },
-//   typography: {
-//     h1: {
-//       fontSize: '2.5rem',
-//       fontWeight: 600,
-//     },
-//     body1: {
-//       fontSize: '6rem',
-//     },
-//   },
-//   // components: {
-//   //   MuiButton: {
-//   //     styleOverrides: {
-//   //       root: {
-//   //         background: 'linear-gradient(45deg, black 30%, #FF8E53 45%)',
-//   //         color: 'white',
-//   //       },
-//   //     },
-//   //   },
-//   //   },
-//     Muidiv: {
-//       styleOverrides: {
-//         root: {
-//           background: 'linear-gradient(45deg, black 30%, #21CBF3 90%)', // Example for AppBar
-//         },
-//       },
-//     },
-// });
+
 
 import { createTheme } from '@mui/material/styles';
 
 const customColors = [
 '#070707','#374E70',
 '#120A4A','#7850FF',
-// '#7850FF','#120A4A',
+// '#272A30','#120A4A',
 '#00066D','#00A3FF',
 // '#00A3FF','#00066D',
 '#6C0834','#E7264E',
-// '#E7264E','#6C0834',
+// '#E7264E',
 '#4D04A9','#9F036D',
-// '#9F036D','#4D04A9',
 '#0A3E56','#108FA2',
-// '#108FA2','#0A3E56',
 '#9259BE','#432958',
 '#009FC5','#034054',
 '#BB60F9','#1E0D55',
-// '#BB60F9','#1E0D55',
+'#FFFFFF','#FFFFFFBF',
+'black','#FF7A7A','#FF0000',
+'#272A30','#00E0FF',
 ];
 const customGradiants = {
   defaultGradiants:`linear-gradient(45deg, ${customColors[1]}, ${customColors[0]})`,
@@ -106,9 +71,9 @@ const theme = createTheme({
       actionNavGradiant: customGradiants.actionNavGradiant,
       racingNavGradiant: customGradiants.racingNavGradiant,
       minecraftNavGradiant: customGradiants.minecraftNavGradiant,
-      aboutusNavGradiant: customGradiants.aboutusNavGradiant,
-      contactusNavGradiant: customGradiants.contactusNavGradiant,
-      FAQsNavGradiant: customGradiants.FAQsoNavGradiant,
+      // aboutusNavGradiant: customGradiants.aboutusNavGradiant,
+      // contactusNavGradiant: customGradiants.contactusNavGradiant,
+      // FAQsNavGradiant: customGradiants.FAQsoNavGradiant,
       // defaultBodyGradiant: customGradiants.defaultBodyGradiant,
       casinoBodyGradiant: customGradiants.casinoBodyGradiant,
       sportsBodyGradiant: customGradiants.sportsBodyGradiant,
@@ -119,7 +84,19 @@ const theme = createTheme({
       contactusBodyGradiant: customGradiants.contactusBodyGradiant,
       FAQsBodyGradiant: customGradiants.FAQsBodyGradiant,
     },
-    
+    text: {
+      main: customColors[18],
+      grey : customColors[19],
+    },
+    favourite: {
+      black : customColors[20],
+      Pink : customColors[21],
+      Red : customColors[22],
+    },
+    button: {
+      blue : customColors[24],
+      grey : customColors[21],
+    },
   },
   
 });

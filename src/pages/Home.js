@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <ResponsiveAppBar />
-      <Typography variant="h1" color="gradients.navGradient">
+      <Typography variant="h1" background="gradients.navGradient">
       <h1>Welcome to the Home Page</h1>
       </Typography>
     </div>
