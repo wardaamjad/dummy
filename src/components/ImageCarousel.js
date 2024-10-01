@@ -24,7 +24,7 @@ const ImageCarousel = () => {
           style={{
             width: "4.375rem",
             height: "0.625rem",
-            margin: "-30px",
+            marginTop: "-30px",
             borderRadius: "0.3125rem",
             border: "1px solid white", // Change color based on active slide
             backgroundColor: i === activeSlide ? "#fff" : "transparent", // Active slide background color
