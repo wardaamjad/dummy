@@ -5,8 +5,9 @@ import image2 from "../assets/22.png";
 import image3 from "../assets/33.png";
 import image4 from "../assets/44.png";
 import image5 from "../assets/55.png";
-
+import { useTheme } from '@mui/material/styles';
 const ImageCarousel = () => {
+  const theme = useTheme(); 
   const [activeSlide, setActiveSlide] = useState(0); // Track the current active slide
 
   const settings = {
@@ -26,7 +27,7 @@ const ImageCarousel = () => {
             height: "0.625rem",
             marginTop: "-30px",
             borderRadius: "0.3125rem",
-            border: "1px solid white", // Change color based on active slide
+            border: `1px solid ${theme.palette.text.main}`, // Change color based on active slide
             backgroundColor: i === activeSlide ? "#fff" : "transparent", // Active slide background color
             transition: "background-color 0.3s ease", // Smooth transition
           }}

@@ -18,6 +18,7 @@ const customColors = [
 '#FFFFFF','#FFFFFFBF',
 'black','#FF7A7A','#FF0000',
 '#272A30','#00E0FF',
+'#272727',
 ];
 const customGradiants = {
   defaultGradiants:`linear-gradient(45deg, ${customColors[1]}, ${customColors[0]})`,
@@ -88,6 +89,9 @@ const theme = createTheme({
     button: {
       blue : customColors[24],
       black : customColors[23],
+    },
+    video: {
+      lightgrey : customColors[25],
     },
   },
   components: {
