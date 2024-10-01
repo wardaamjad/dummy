@@ -26,10 +26,6 @@ const customGradiants = {
   actionNavGradiant:`linear-gradient(45deg, ${customColors[7]}, ${customColors[6]})`,
   racingNavGradiant:`linear-gradient(45deg, ${customColors[9]}, ${customColors[8]})`,
   minecraftNavGradiant:`linear-gradient(45deg, ${customColors[11]}, ${customColors[10]})`,
-  // aboutusNavGradiant:`linear-gradient(45deg, ${customColors[12]}, ${customColors[12]})`,
-  // contactusNavGradiant:`linear-gradient(45deg, ${customColors[15]}, ${customColors[14]})`,
-  // FAQsNavGradiant:`linear-gradient(45deg, ${customColors[17]}, ${customColors[16]})`,
-  // defaultbodyGradiant:'radial-gradient(circle, #070707, #374E70)',
   casinoBodyGradiant:`radial-gradient(circle, ${customColors[3]}, ${customColors[2]})`,
   sportsBodyGradiant:`radial-gradient(circle, ${customColors[5]}, ${customColors[4]})`,
   actionBodyGradiant:`radial-gradient(circle, ${customColors[7]}, ${customColors[6]})`,
@@ -71,10 +67,6 @@ const theme = createTheme({
       actionNavGradiant: customGradiants.actionNavGradiant,
       racingNavGradiant: customGradiants.racingNavGradiant,
       minecraftNavGradiant: customGradiants.minecraftNavGradiant,
-      // aboutusNavGradiant: customGradiants.aboutusNavGradiant,
-      // contactusNavGradiant: customGradiants.contactusNavGradiant,
-      // FAQsNavGradiant: customGradiants.FAQsoNavGradiant,
-      // defaultBodyGradiant: customGradiants.defaultBodyGradiant,
       casinoBodyGradiant: customGradiants.casinoBodyGradiant,
       sportsBodyGradiant: customGradiants.sportsBodyGradiant,
       actionBodyGradiant: customGradiants.actionBodyGradiant,
@@ -95,10 +87,87 @@ const theme = createTheme({
     },
     button: {
       blue : customColors[24],
-      grey : customColors[21],
+      black : customColors[23],
     },
   },
-  
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          my: 2,
+          color: customColors[18], // white text
+          display: 'block',
+          border: '1px solid transparent', // Initial border state
+          transition: '0.3s', // Smooth transition for hover effect
+          position: 'relative', // Required for inner shadow effect
+          "&:hover": {
+            border: `1px solid ${customColors[24]}`, // Neon blue border color
+            mixBlendMode: "screen",
+            backgroundColor: customColors[23], // Black background on hover
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: customColors[20], // Black background
+          color: customColors[18], // White text color
+          borderRadius: '6px', // Rounded corners
+          padding: '3px',
+           // Padding inside the card
+          // boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Subtle shadow for elevation
+          position: 'relative', // For positioning the heart icon
+        },
+      },
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        root: {
+          borderRadius: '2px', // Slightly rounded image
+          width: '100%', // Full width of the card
+          height: 'auto', // Auto height based on image aspect ratio
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        h6: {
+          fontFamily: 'Poppins, sans-serif',
+          fontSize: '14px', // Bold title
+          fontWeight: 300,
+          color: customColors[18], // White color for the title
+          marginTop: '1px',
+          marginLeft: '0px', // Spacing between image and title
+        },
+        body2: {
+          fontSize: '8px', // Smaller description text
+          color: customColors[19], // Greyish color for description
+          marginTop: '4px', // Spacing between title and description
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: '8px',  // Set the desired padding
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          position: 'absolute',
+          top: '0px', // Top-right corner
+          right: '0px',
+          color: customColors[18],
+          // background: customColors[18],
+
+           // White color for the heart icon
+        },
+      },
+    },
+  },
 });
 
 export default theme;

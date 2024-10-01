@@ -1,5 +1,3 @@
-// src/App.js
-
 import React from 'react';
 import { Button, Typography, h1 } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
