@@ -100,15 +100,15 @@ function ResponsiveAppBar() {
                 onClick={() => handlePageClick(page)}
                 sx={{
                   my: 2,
-                  color: "white",
+                  color: theme.palette.text.main,
                   display: "block",
                   border: "1px solid transparent", // Initial border state
                   transition: "0.3s", // Smooth transition for hover effect
                   position: "relative", // Required for inner shadow effect
                   "&:hover": {
-                    border: "1px solid #00E0FF", // Neon border color
+                    border: `1px solid ${theme.palette.button.blue}`, // Neon border color
                     mixBlendMode: "screen",
-                    background: "#272A30",
+                    background: theme.palette.button.black,
                   },
                 }}
               >
@@ -121,14 +121,14 @@ function ResponsiveAppBar() {
               startIcon={<img src={profile} alt="profile" />}
               sx={{
                 ml: 5,
-                borderRadius: "0.1875rem",
+                borderRadius: theme.palette.button.black,
                 background: "#272A30",
                 boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 color: "white",
                 "&:hover": {
-                  border: "1px solid #00E0FF", // Neon border color
+                  border: `1px solid ${theme.palette.button.blue}`, // Neon border color
                   mixBlendMode: "screen",
-                  background: "#272A30",
+                  background: theme.palette.button.black,
                 },
               }}
             >
@@ -140,13 +140,13 @@ function ResponsiveAppBar() {
               sx={{
                 ml: 2,
                 borderRadius: "0.1875rem",
-                background: "#272A30",
+                background: theme.palette.button.black,
                 boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 color: "white",
                 "&:hover": {
-                  border: "1px solid #00E0FF", // Neon border color
+                  border: `1px solid ${theme.palette.button.blue}`, // Neon border color
                   mixBlendMode: "screen",
-                  background: "#272A30",
+                  background: theme.palette.button.black,
                 },
               }}
             >

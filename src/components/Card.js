@@ -18,7 +18,7 @@ const CardComponent = () => {
         title="Casino Slots Game"
         
       />
-      <CardContent sx={{ backgroundColor: '#f50057' }}>
+      <CardContent>
         <Typography variant="h6">
           Casino Slots Game
         </Typography>

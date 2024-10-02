@@ -1,7 +1,9 @@
 import React from "react";
 import CardComponent from "./Card";
+import { useTheme } from '@mui/material/styles';
 
 const HomeGames = () => {
+  const theme = useTheme(); 
   const renderCards = () => {
     const cards = [];
     for (let i = 0; i < 8; i++) {
@@ -13,7 +15,7 @@ const HomeGames = () => {
   return (
     <div
       style={{
-        background: "linear-gradient(270deg, #070707 0%, #374E70 100%)",
+        background: theme.palette.gradients.defaultGradiants,
         padding: "40px 80px",
         marginTop: "-22px",
       }}
