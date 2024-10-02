@@ -7,7 +7,7 @@ import theme from '../theme/theme'
 
 const CardComponent = () => {
   return (
-    <Card sx={{ width: 166, height: 214 }}>
+    <Card sx={{ width: 290, height: 350 }}>
       <IconButton>
       <img src={image1} alt="Favorite" style={{ width: '12px', height: '12px' }} />
       </IconButton>
@@ -19,7 +19,7 @@ const CardComponent = () => {
         
       />
       <CardContent>
-        <Typography variant="h6">
+        <Typography variant="h5">
           Casino Slots Game
         </Typography>
         <Typography variant="body2">

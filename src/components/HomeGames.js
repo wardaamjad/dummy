@@ -27,7 +27,7 @@ const HomeGames = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)", // 4 cards per row
-            gap: "20px", // spacing between cards
+            gap: "50px", // spacing between cards
           }}
         >
           {renderCards()}

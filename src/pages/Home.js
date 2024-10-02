@@ -4,6 +4,8 @@ import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import ImageCarousel from '../components/ImageCarousel';
 import Video from '../components/Video';
 import HomeGames from '../components/HomeGames';
+import GamingComponent from '../components/GamingComponent';
+import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div>
@@ -11,6 +13,8 @@ const Home = () => {
       <ImageCarousel />
       <Video />
       <HomeGames />
+      <GamingComponent />
+      <Footer />
     </div>
   );
 };
