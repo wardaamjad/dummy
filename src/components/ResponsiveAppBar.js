@@ -15,10 +15,11 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
 import logo from "../assets/logo.png"; // Import your video file
 import profile from "../assets/Profile.png"; // Import your video file
+import { useNavigate } from "react-router-dom";
 
 const pages = [
   "Casino Games",
-  "Supports Games",
+  "Sports Games",
   "Action Games",
   "Racing Games",
   "Minecraft Games",
@@ -30,6 +31,7 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const theme = useTheme(); // Access the theme
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [activePage, setActivePage] = React.useState(""); // State for active page
@@ -51,6 +53,21 @@ function ResponsiveAppBar() {
 
   const handlePageClick = (page) => {
     setActivePage(page); // Update the active page
+    if(page === "Casino Games"){
+      navigate('/casino-games')
+    }
+    if(page === "Sports Games"){
+      navigate('/sport-games')
+    }
+    if(page === "Action Games"){
+      navigate('/action-games')
+    }
+    if(page === "Racing Games"){
+      navigate('/racing-games')
+    }
+    if(page === "Minecraft Games"){
+      navigate('/minecraft-games')
+    }
     handleCloseNavMenu(); // Close the menu after selection
   };
 
@@ -59,7 +76,7 @@ function ResponsiveAppBar() {
     switch (activePage) {
       case "Casino Games":
         return theme.palette.gradients.casinoNavGradiant;
-      case "Supports Games":
+      case "Sports Games":
         return theme.palette.gradients.sportsNavGradiant;
       case "Action Games":
         return theme.palette.gradients.actionNavGradiant;

@@ -9,7 +9,7 @@ const Footer = () => {
       style={{
         backgroundColor: "black",
         color: "white",
-        padding: "3rem 0",
+        // padding: "3rem 0",
         width: "100%",
       }}
     >
