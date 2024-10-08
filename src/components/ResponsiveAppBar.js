@@ -26,6 +26,9 @@ const pages = [
   "About us",
   "Contact us",
   "FAQs",
+  // "Donate",
+  // "Leaderboard",
+  // "User account",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -68,6 +71,18 @@ function ResponsiveAppBar() {
     if(page === "Minecraft Games"){
       navigate('/minecraft-games')
     }
+    if(page === "About us"){
+      navigate('/about-us')
+    }
+    if(page === "Contact us"){
+      navigate('/contact-us')
+    }
+    if(page === "FAQs"){
+      navigate('/faqs')
+    }
+    // if(page === "Leaderboard"){
+    //   navigate('/leaderboard')
+    // }
     handleCloseNavMenu(); // Close the menu after selection
   };
 
@@ -138,8 +153,8 @@ function ResponsiveAppBar() {
               startIcon={<img src={profile} alt="profile" />}
               sx={{
                 ml: 5,
-                borderRadius: theme.palette.button.black,
-                background: "#272A30",
+                borderRadius: "0.1875rem",
+                background:theme.palette.button.black,
                 boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
                 color: "white",
                 "&:hover": {

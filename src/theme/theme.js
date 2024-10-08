@@ -18,7 +18,7 @@ const customColors = [
 '#FFFFFF','#FFFFFFBF',
 'black','#FF7A7A','#FF0000',
 '#272A30','#00E0FF',
-'#272727',
+'#272727','#8D8D8D'
 ];
 const customGradiants = {
   defaultGradiants:`linear-gradient(45deg, ${customColors[1]}, ${customColors[0]})`,
@@ -93,32 +93,35 @@ const theme = createTheme({
     video: {
       lightgrey : customColors[25],
     },
+    form: {
+      lightgrey : customColors[26],
+    },
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          my: 2,
-          color: customColors[18], // white text
-          display: 'block',
-          border: '1px solid transparent', // Initial border state
-          transition: '0.3s', // Smooth transition for hover effect
-          position: 'relative', // Required for inner shadow effect
-          "&:hover": {
-            border: `1px solid ${customColors[24]}`, // Neon blue border color
-            mixBlendMode: "screen",
-            backgroundColor: customColors[23], // Black background on hover
-          },
-        },
-      },
-    },
+    // MuiButton: {
+    //   styleOverrides: {
+    //     root: {
+    //       my: 2,
+    //       color: customColors[18], // white text
+    //       display: 'block',
+    //       border: '1px solid transparent', // Initial border state
+    //       transition: '0.3s', // Smooth transition for hover effect
+    //       position: 'relative', // Required for inner shadow effect
+    //       "&:hover": {
+    //         border: `1px solid ${customColors[24]}`, // Neon blue border color
+    //         mixBlendMode: "screen",
+    //         backgroundColor: customColors[23], // Black background on hover
+    //       },
+    //     },
+    //   },
+    // },
     MuiCard: {
       styleOverrides: {
         root: {
           backgroundColor: customColors[20], // Black background
           color: customColors[18], // White text color
-          borderRadius: '6px', // Rounded corners
-          padding: '3px',
+          borderRadius: '13px', // Rounded corners
+          padding: '7px',
            // Padding inside the card
           // boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', // Subtle shadow for elevation
           position: 'relative', // For positioning the heart icon
@@ -128,7 +131,7 @@ const theme = createTheme({
     MuiCardMedia: {
       styleOverrides: {
         root: {
-          borderRadius: '2px', // Slightly rounded image
+          borderRadius: '8px', // Slightly rounded image
           width: '100%', // Full width of the card
           height: 'auto', // Auto height based on image aspect ratio
         },
@@ -136,16 +139,16 @@ const theme = createTheme({
     },
     MuiTypography: {
       styleOverrides: {
-        h6: {
-          fontFamily: 'Poppins, sans-serif',
-          fontSize: '14px', // Bold title
-          fontWeight: 300,
-          color: customColors[18], // White color for the title
-          marginTop: '1px',
-          marginLeft: '0px', // Spacing between image and title
-        },
+        // h6: {
+        //   fontFamily: 'Poppins, sans-serif',
+        //   fontSize: '8px', // Bold title
+        //   fontWeight: 500,
+        //   color: customColors[18], // White color for the title
+        //   marginTop: '8px',
+        //   marginLeft: '0px', // Spacing between image and title
+        // },
         body2: {
-          fontSize: '8px', // Smaller description text
+          fontSize: '13px', // Smaller description text
           color: customColors[19], // Greyish color for description
           marginTop: '4px', // Spacing between title and description
         },
@@ -154,7 +157,7 @@ const theme = createTheme({
     MuiCardContent: {
       styleOverrides: {
         root: {
-          padding: '8px',  // Set the desired padding
+          padding: '17px',  // Set the desired padding
         },
       },
     },
@@ -162,8 +165,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           position: 'absolute',
-          top: '0px', // Top-right corner
-          right: '0px',
+          top: '6px', // Top-right corner
+          right: '6px',
           color: customColors[18],
           // background: customColors[18],
 

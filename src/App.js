@@ -9,6 +9,11 @@ import ActionGamesPage from './pages/ActionGamesPage';
 import RacingGamesPage from './pages/RacingGamesPage';
 import MinecraftGamesPage from './pages/MinecraftGamesPage';
 import SportGamesPage from './pages/SportGamesPage';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import FAQs from './pages/FAQs';
+import Leaderboard from './pages/Leaderboard';
+
 function App() {
   return (
     <Router>
@@ -20,6 +25,10 @@ function App() {
         <Route path="/racing-games" element={<RacingGamesPage />} />
         <Route path="/minecraft-games" element={<MinecraftGamesPage />} />
         <Route path="/sport-games" element={<SportGamesPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </Router>
     

@@ -65,7 +65,7 @@ const CasinoGamesPage = () => {
       </div>
       <Grid
         container
-        spacing={3}
+        spacing={1}
         sx={{
           marginTop: "0px !Important",
           padding: "6rem 3rem",
